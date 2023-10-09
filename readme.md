@@ -33,6 +33,20 @@ The other eigenvalues and eigenvectors follow the pattens as below
 
 ![demo.png](./img/demo.png "demo.png")
 
+The values and vectors are complex other than real numbers,
+so the inequality changes into, which is also satisfied.
+
+$$x^{*T} x \ge x^{*T} \lambda^2 x = x^{*T} A^T A x$$
+
+in which, the $x^*$ refers the conjugate of the $x$.
+It converges as following
+
+![converge.png](img/converge.png "converge.png")
+![converge-2.png](img/converge-2.png "converge-2.png")
+
+$\blacksquare$
+
+
 ## Code description
 
 - rnd_stochastic_matrix(rows: int = 6, cols: int = 6) -> np.array:

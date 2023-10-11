@@ -52,14 +52,13 @@ class PerlinNoiseMatrix(object):
 
     seed = np.random.randint(0, 65536)
     t = 0
-    t_step = 0.01
+    t_step = 0.05
 
     def __init__(self, n: int = 5):
         opensimplex.seed(self.seed)
         self.n = n
         self.n2 = n**2
 
-    @timing_decorator
     def random_matrix(self):
         """
         Generates a new random complex matrix using Perlin noise.
@@ -197,6 +196,7 @@ if __name__ == '__main__':
     mat = generate_random_matrix()
     data = simulate_eigenvalues(mat)
 
+    print(mat)
     print(data)
 
     sns.scatterplot(data, x='real', y='imag',

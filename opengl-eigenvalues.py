@@ -84,9 +84,10 @@ def redraw():
 
 
 def display():
-    while True:
-        redraw()
-        time.sleep(0.01)
+    redraw()
+    # while True:
+    #     redraw()
+    #     time.sleep(0.01)
 
 
 # %% ---- 2023-10-11 ------------------------
@@ -101,6 +102,7 @@ if __name__ == '__main__':
 
     glut.glutCreateWindow("Wnd-1")
     glut.glutDisplayFunc(display)
+    glut.glutIdleFunc(display)
 
     glut.glutMainLoop()
 

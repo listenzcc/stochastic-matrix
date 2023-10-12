@@ -81,6 +81,7 @@ class PerlinNoiseMatrix(object):
 
         real = np.array([opensimplex.noise2(j, t)
                         for j in range(n2)]).reshape((n, n))
+
         imag = np.array([opensimplex.noise2(1000 + j, t)
                         for j in range(n2)]).reshape((n, n))
 

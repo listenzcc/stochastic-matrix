@@ -73,7 +73,6 @@ for _ in range(200):
     print(img.shape)
     img /= np.max(img)
     mat = (img[0] * 255).astype(np.uint8).transpose([2, 1, 0])
-    mat = cv2.resize(mat, (400, 400))
 
     cv2.imshow('main', mat)
     cv2.waitKey(1)
